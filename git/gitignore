@@ -43,3 +43,15 @@ Session.vim
 # SASS
 # ----------------------------------------------------------------------------------------------
 .sass-cache
+
+/lib/tasks/bryan_helper_tasks.rake
+.rvmrc
+.ruby-version
+.ruby-gemset
+
+node_modules
+bower_modules
+npm-debug.log
+.agignore
+.treeignore
+/vendor/cache/

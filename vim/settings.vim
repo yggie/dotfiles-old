@@ -13,3 +13,6 @@ for fpath in split(globpath(vimsettings, '*.vim'), '\n')
 
   exe 'source' fpath
 endfor
+
+" hotfix for unfortunate color clashing in terminal with nodeJS mocha reporter
+autocmd VimEnter * highlight Normal ctermbg=NONE

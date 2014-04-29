@@ -1,0 +1,23 @@
+" treat handlebars as a HTML file
+" au BufNewFile,BufRead *.handlebars set filetype=html
+au BufNewFile,BufRead *.tmpl set filetype=html
+
+" highlight ColorColumn ctermfg=red ctermbg=white
+" highlight ColorColumn ctermfg=darkred
+let &colorcolumn=join(range(81, 256), ",")
+
+" highlight OverLength ctermfg=darkred
+" match OverLength /\%81v.\+/
+
+" enable intelligent emmet expansion for html filetypes
+autocmd FileType html imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['html', 'scss', 'java', 'py']}
+
+set shell=/bin/sh
+
+" very helpful to run spec files
+map ,rt :! rspec %<CR>
+
+" case insensitive file opening
+set wildignorecase
